@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bu7w5fqflvheb"]
+
+[ext_resource type="Script" path="res://actors/character.gd" id="1_iom23"]
+[ext_resource type="Script" path="res://actors/character_visual.gd" id="2_eicvm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sea4s"]
+radius = 100.0
+
+[node name="Character" type="Node" node_paths=PackedStringArray("visual")]
+script = ExtResource("1_iom23")
+visual = NodePath("CharacterVisual")
+
+[node name="CharacterVisual" type="Area2D" parent="."]
+script = ExtResource("2_eicvm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterVisual"]
+shape = SubResource("CircleShape2D_sea4s")
