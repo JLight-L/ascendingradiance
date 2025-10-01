@@ -1,13 +1,13 @@
 # ascendingradiance
 A game made for myself
 
-I want the game to be:
+Goals:
 
 - Easy to play;
-- With fast rounds;
-- Highly extensible with a auto-numerical system;
-- With character growth and special talents;
-- With flexible chooses;
+- Short, snappy rounds;
+- Highly extensible with an auto-scaling numeric system;
+- Meaningful character growth and unique talents;
+- Flexible choices;
 - ....
 
 ## 游戏主体逻辑
