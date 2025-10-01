@@ -1,12 +1,15 @@
 # ascendingradiance
 A game made for myself
+
 I want the game to be:
-    Easy to play;
-    With fast rounds;
-    Highly extensible with a auto-numerical system;
-    With character growth and special talents;
-    With flexible chooses;
-    ....
+
+- Easy to play;
+- With fast rounds;
+- Highly extensible with a auto-numerical system;
+- With character growth and special talents;
+- With flexible chooses;
+- ....
+
 ## 游戏主体逻辑
 一场主战斗中，每一次交锋都是一次成长的机会，双方（或多方）的同时进步会带来瞬息万变的战局。
 
