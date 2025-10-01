@@ -3,7 +3,13 @@ extends Character
 
 var basic_character: Character
 var is_alive: bool = true
-var health: float
+var health: float:
+	set(value):
+		if value <= 0:
+			health = 0
+			is_alive = false
+		else:
+			health = value
 var charging: float
 var buffs: Array = []
 var battle_plan: Array = [null, null, null]
@@ -22,3 +28,7 @@ func enter_battle() -> void:
 '释放技能判定（根据战斗计划释放）'
 
 '被攻击 以及格挡判断'
+
+## 计算直接的扣血和效果的触发
+func health_decrease(dmg: float) -> void:
+	self.health = health - dmg

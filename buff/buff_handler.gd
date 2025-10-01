@@ -6,7 +6,7 @@ extends Node
 var buff_pool: Array[Buff] = []   # 所有可能会需要处理的buff列表，随节点初始化
 var now_buffs: Array[Buff] = []   # 当前生效的buff列表，随时更改
 
-func on_buff_trigger(trigger_type: Buff.BuffTriggerType, params: Dictionary) -> void:
+func on_buff_trigger(trigger_type: Buff.BuffTriggerType, _params: Dictionary) -> void:
 	match trigger_type:
 		Buff.BuffTriggerType.ON_ATTACK:
 			pass
