@@ -6,6 +6,8 @@ var damage_type: DamageType
 var source: BattleCharacter
 var target: BattleCharacter
 
+var buff_trigger_on: bool = true
+
 func _init(sour:BattleCharacter, targ:BattleCharacter, value:float=0.0, type:DamageType=Hit.new()) -> void:
     damage_type = type
     base_value = type.get_damage_value(value, sour, targ)

@@ -5,6 +5,7 @@ var name: String
 var description: String
 var min_charging: GrowthNumber
 var max_charging: GrowthNumber
+var use_time: GrowthNumber
 var values_of_effect: Array[GrowthNumber]
 
 

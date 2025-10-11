@@ -2,11 +2,15 @@ class_name Buff
 extends Resource
 
 enum BuffTriggerType {
-	ON_ATTACK,
-	ON_HURT,
+	BEFORE_BATTLE,
+	ON_CHARGE,
+	ON_DAMAGE,
+	ON_GET_DAMAGE,
 	ON_SKILL,
 	ON_BLOCK,
+	ON_BUFF_CHANGE,
 	ON_DEATH,
+
 	ON_ROUND_START,
 	ON_ROUND_END
 }
