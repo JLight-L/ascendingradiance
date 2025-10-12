@@ -16,24 +16,8 @@ var battle_plan: Array = [null, null, null]
 # 战斗计划：[(技能1,预期蓄力值,最低格挡蓄力值)], (技能2,蓄力比例,最低格挡蓄力值),...]
 
 # 数值提升
-var adders: Dictionary[Character.AttrType,float] = {
-	Character.AttrType.MAX_HEALTH: 0.0,
-	Character.AttrType.DEFENCE: 0.0,
-	Character.AttrType.ATTACK: 0.0,
-	Character.AttrType.ATTACK_SPEED: 0.0,
-	Character.AttrType.CRIT_LEVEL: 0.0,
-	Character.AttrType.MAX_CHARGING: 0.0,
-	Character.AttrType.CHARGING_SPEED: 0.0
-}
-var multipliers: Dictionary[Character.AttrType,float] = {
-	Character.AttrType.MAX_HEALTH: 1.0,
-	Character.AttrType.DEFENCE: 1.0,
-	Character.AttrType.ATTACK: 1.0,
-	Character.AttrType.ATTACK_SPEED: 1.0,
-	Character.AttrType.CRIT_LEVEL: 1.0,
-	Character.AttrType.MAX_CHARGING: 1.0,
-	Character.AttrType.CHARGING_SPEED: 1.0
-}
+var adders: Dictionary[Character.AttrType,float]
+var multipliers: Dictionary[Character.AttrType,float]
 
 var max_health                 = 10.0
 var damage_mitigation          = 1.0
@@ -44,6 +28,14 @@ var crit_rate                  = 0.0
 var crit_damage_multiplier     = 1.0
 var max_charging               = 10.0
 var charging_speed             = 1.0
+
+func initialize_attrs_increasers() -> void:
+	for attr in Character.AttrType.values():
+		adders[attr] = 0.0
+		multipliers[attr] = 1.0
+
+func _init() -> void:
+	initialize_attrs_increasers()
 
 func get_attr_value(attr: Character.AttrType) -> float:
 	var attr_value = (basic_attributes[attr].value + adders[attr]) * multipliers[attr]
